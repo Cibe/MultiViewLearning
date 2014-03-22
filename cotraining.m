@@ -10,10 +10,10 @@ while(sum(testsetVector)~=0)
     sum(trainingsetVector);
 for i=1:numViews
     if iteration == 1
-        [original(i).testData Oindices original(i).labels]=CreateDataset(views(i).viewdata,testsetVector,labels);
+        [original(i).testData Oindices original(i).labels]=createDataset(views(i).viewdata,testsetVector,labels);
     end
-   [trainingData trainingDataIndices trainingLabels]=CreateDataset(views(i).viewdata,trainingsetVector,labels);
-   [testData testDataIndices testLabels]=CreateDataset(views(i).viewdata,testsetVector,labels);
+   [trainingData trainingDataIndices trainingLabels]=createDataset(views(i).viewdata,trainingsetVector,labels);
+   [testData testDataIndices testLabels]=createDataset(views(i).viewdata,testsetVector,labels);
    % views(i).model=LearnSVM(trainingData,trainingLabels);  % for svm
    % uncomment the line
    views(i).model=Learn(trainingData,trainingLabels)
