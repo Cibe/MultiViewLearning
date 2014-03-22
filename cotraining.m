@@ -29,7 +29,7 @@ for i=1:numViews
 end
    %[newlabels SortedIds]=selectTopK(probablitys);
    [newlabels SortedIds]=multiselectTopKeveryclass(probablitys);      % selecting high probablity datapoints and labeling them
-   %[newlabels SortedIds]=multiselectTopKeveryclassproportion(probablitys,proportion);
+   %[newlabels SortedIds]=multiselectTopKeveryclass(probablitys);     % uncomment this line to select top K in every class
    testsetVector(testDataIndices(SortedIds))=0;
    labels(testDataIndices(SortedIds))=newlabels;
    trainingsetVector= ~testsetVector;
